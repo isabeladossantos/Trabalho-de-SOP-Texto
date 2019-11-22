@@ -1,0 +1,16 @@
+int main (void){
+
+   time_t rawtime;
+   struct tm * timeinfo;
+   time ( &rawtime );
+   timeinfo = localtime ( &rawtime );
+
+    FILE *ponteiro;
+    // Abrindo o arquivo
+    ptr = fopen("Atividade_C_SOP.txt", "a" );
+
+    fprintf(ponteiro, "%s", asctime (timeinfo) );
+    fclose(ponteiro);
+
+    return 0;
+}

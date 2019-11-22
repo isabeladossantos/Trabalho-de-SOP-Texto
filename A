@@ -1,0 +1,38 @@
+int main (void){
+
+    int numInteiro;
+    float numDecimal;
+    char texto[80] = "Isabela";
+    
+    numInteiro = 22;
+    numDecimal = 20.5;
+
+    FILE *ponteiro;
+    
+    // Abrindo o arquivo
+    ponteiro = fopen("Atividade_SOP.txt", "w" );
+
+    fprintf(ponteiro, "%s %i %.2f", texto, numInteiro, numDecimal);
+
+    fclose(ponteiro);
+
+    FILE *verArquivo;
+
+    verArquivo = fopen("Atividade_SOP.txt", "r" );
+    
+    int num2inteiro;
+    float num2Decimal;
+    char texto2[80];
+
+    int num2inteiro;
+
+    fscanf(ler, "%s %i %f", &texto2, &num2inteiro, &num2Decimal);
+    printf("-----------------------------------\n");
+    printf("Lendo o arquivo: ");
+    printf("%s %i %.2f", texto2, num2inteiro, num2Decimal);
+    printf("\n-----------------------------------");
+    printf("\nFim da Leitura    \n-----------------------------------");
+    fclose(verArquivo);
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+int main (void){
+
+     char col1[100] = "| Coluna 1 |";
+     char col2[100] = " Coluna 2 |";
+     char col3[100] = " Coluna 3 |";
+     char col4[100] = " Coluna 4 |";
+
+    FILE *ponteiro;
+    // Abrindo um arquivo
+    ponteiro = fopen("Atividade_B_SOP.txt", "w" );
+
+    fprintf(ponteiro, "%s %s %s %s", col1, col2, col3, col4);
+
+    fclose(ponteiro);
+    return 0;
+}
